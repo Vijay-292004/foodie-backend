@@ -5,7 +5,7 @@ const categoryModel = require("../models/categoryModel")
 const createCategoryController=async(req,res)=>{
     try{
         const {title,imageUrl} = req.body
-        if(!title || imageUrl){
+        if(!title){
             return res.status(500).send({
                 success:false,
                 message:"Please provide title and imageUrl"
